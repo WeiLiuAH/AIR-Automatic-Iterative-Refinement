@@ -25,7 +25,7 @@ The framework produces more challenging and realistic instructions, leading to i
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/WeiLiuAH/AIR
+git clone https://github.com/WeiLiuAH/AIR-Automatic-Iterative-Refinement
 cd AIR
 pip install -r requirements.txt
 ```
