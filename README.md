@@ -2,7 +2,7 @@
     <img src="logo/air.png" alt="AIR Logo" width="100"/>
 
 # AIR: Complex Instruction Generation via Automatic Iterative Refinement
-[![Hugging Face Datasets](https://img.shields.io/badge/🤗_Hugging_Face-Datasets-blue)](https://huggingface.co/datasets/MengGaoang/AIR)
+
 [![arXiv](https://img.shields.io/badge/arXiv-2502.17787-b31b1b.svg)](https://arxiv.org/abs/2502.17787)
 </div>
 
@@ -92,9 +92,7 @@ bash ./judge_data_process/data_process_0207.sh
 
 ## 🔄 Training
 
-### Quick Start with Pre-processed Dataset
-Download our processed dataset directly from Hugging Face:
-- [AIR Dataset](https://huggingface.co/datasets/MengGaoang/AIR)
+
 
 ### Compatible Models
 We support training using [LlamaFactory](https://github.com/hiyouga/LLaMA-Factory) with the following models:
