@@ -3,7 +3,7 @@
 
 # AIR: Complex Instruction Generation via Automatic Iterative Refinement
 [![Hugging Face Datasets](https://img.shields.io/badge/🤗_Hugging_Face-Datasets-blue)](https://huggingface.co/datasets/MengGaoang/AIR)
-[![arXiv](https://img.shields.io/badge/arXiv-2502.XXXXX-b31b1b.svg)](https://arxiv.org/abs/2502.XXXXX)
+[![arXiv](https://img.shields.io/badge/arXiv-2502.17787-b31b1b.svg)](https://arxiv.org/abs/2502.17787)
 </div>
 
 ## 🌟 Overview
@@ -110,8 +110,8 @@ If you find this work helpful, please cite our paper:
 ```bibtex
 @article{air2025,
   title={AIR: Complex Instruction Generation via Automatic Iterative Refinement},
-  author={},
-  journal={arXiv preprint arXiv:},
+  author={Wei Liu and Yancheng He and Hui Huang and Chengwei Hu and Jiaheng Liu and Shilong Li and Wenbo Su and Bo Zheng},
+  journal={arXiv preprint arXiv:2502.17787},
   year={2025}
 }
 ```
