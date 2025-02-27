@@ -82,7 +82,7 @@ def llm_infer_params_generate(max_output_tokens=4096, temperature=0.2):
     }
     return params
 
-def output_improve_data_generate_1221_1(data, columns_ins="instruction", columns_output="output", columns_cons=None): # 对output进行润色
+def output_improve_data_generate(data, columns_ins="instruction", columns_output="output", columns_cons=None): # 对output进行润色
     messages_all = []
 
     for item in data:
@@ -180,7 +180,7 @@ def llm_data_generate(data, columns_ins="instruction", columns_cons=None):
 
 
 
-def doc_to_llm_answer_cons_data_generate_1221_model_select_1cons(data, constraints_by_type, constraint_field_pattern=None, constraint_field_range=None, columns_ins="instruction", columns_output1="output1", columns_output2="output2"):
+def doc_to_llm_answer_cons_data_generate(data, constraints_by_type, constraint_field_pattern=None, constraint_field_range=None, columns_ins="instruction", columns_output1="output1", columns_output2="output2"):
 
     messages_all = []
     for item in data:
@@ -521,7 +521,7 @@ def main(args):
     if "document_polish" not in data[0].keys():
         print(f"using {args.model_path} to generate document_polish...")
 
-        messages_all = output_improve_data_generate_1221_1(data, columns_ins=args.instruction, columns_output=args.output)
+        messages_all = output_improve_data_generate(data, columns_ins=args.instruction, columns_output=args.output)
         params = llm_infer_params_generate()
         outputs = vllm_generate(llm, tokenizer, messages_all, params)
         for i, output in enumerate(outputs):
@@ -581,7 +581,7 @@ def main(args):
             print(f"using {args.model_path} to generate constraint_loop{iter_num}_0")
 
             constraints_var = f"constraints_loop{iter_num}_0"
-            messages_all = doc_to_llm_answer_cons_data_generate_1221_model_select_1cons(
+            messages_all = doc_to_llm_answer_cons_data_generate(
                 filtered_data, constraints_by_type,
                 constraint_field_pattern="constraints_dict_loop{i}_all", 
                 constraint_field_range = range(1, iter_num) if iter_num >= 2 else None,
