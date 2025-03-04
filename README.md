@@ -77,7 +77,7 @@ python ./init_process/instruct_score_filter.py \
 bash ./judge_data_gene/run_main.sh
 
 # Process for SFT training
-bash ./judge_data_process/data_process_0207.sh
+bash ./judge_data_process/data_process.sh
 ```
 
 #### Models Used
